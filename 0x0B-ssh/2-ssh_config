@@ -1,0 +1,10 @@
+# SSH client configuration
+
+# Default settings
+Host *
+    PasswordAuthentication no
+
+# Configuration for the specific server
+Host 524025-web-01
+    HostName <52.86.203.150>
+    IdentityFile ~/.ssh/school
