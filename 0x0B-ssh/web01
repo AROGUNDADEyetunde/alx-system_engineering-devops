@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# creating a public key to let alx connect to my server
+
+
+eval $("ssh-agent")
+
+ssh-add ~/.ssh/school
+
+
+ssh ubuntu@52.86.203.150
