@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# configures a server to listening on port 80 of all servers active IPv4 IPs
 
+# Replace the default port 8080 with port 80 in Nginx configuration
 sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+
+# Restart Nginx service to apply the configuration changes
 sudo service nginx restart
+
+# Clear nginx.pid file to ensure a fresh start
 echo "" | sudo dd status=none of=/run/nginx.pid
